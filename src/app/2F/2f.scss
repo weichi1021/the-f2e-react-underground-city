@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+$primaryColor: #3c5a44;
+$bgColor: #293B29;
+$orangeColor: #ff7600;
+$greenColor: #a2e906;
+$whiteColor: #fff;
+$grayColor: #caceca;
+
+%flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.the-f2e-2f {
+  background-color: $bgColor;
+  min-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  @extend %flexCenter;
+  .clock-group {
+    width: 450px;
+    height: 450px;
+    background-color: $primaryColor;
+    box-shadow: 0px 0px 38px rgba(0, 0, 0, 0.2);
+    border-radius: 20%;
+    position: relative;
+    @extend %flexCenter;
+  }
+  .clock-circle {
+    width: 400px;
+    height: 400px;
+    background-color: $bgColor;
+    border: 3px solid #213008;
+    border-radius: 50%;
+    position: relative;
+    z-index: 9;
+  }
+  .hour-hand, .minute-hand, .second-hand {
+    transform-origin: bottom center;
+    position: absolute;
+    z-index: 9;
+    &:before, &:after {
+      position: absolute;
+      content: '';
+      z-index: 10;
+    }
+  }
+  .hour-hand {
+    width: 10px;
+    height: 70px;
+    background-color: $whiteColor;
+    top: calc(50% - 70px);
+    left: calc(50% - 5px);
+    transform: rotate(300deg);
+    &:after {
+      width: 4px;
+      height: 30px;
+      top: 3px;
+      left: calc(50% - 2px);
+      background-color: $primaryColor;
+    }
+  }
+  .minute-hand {
+    width: 10px;
+    height: 100px;
+    border-radius: 25px;
+    background-color: $orangeColor;
+    transform: rotate(60deg);
+    top: calc(50% - 100px);
+    left: calc(50% - 5px);
+    &:after {
+      width: 2px;
+      height: 40px;
+      bottom: 5px;
+      left: calc(50% - 1px);
+      background-color: $whiteColor;
+    }
+    &:before {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      bottom: 5px;
+      left: calc(50% - 3px);
+      background-color: $whiteColor;
+    }
+  }
+  .second-hand {
+    width: 2px;
+    height: 130px;
+    background-color: $greenColor;
+    top: calc(50% - 130px);
+    left: calc(50% - 1px);
+    transform: rotate(0deg);
+    &:after {
+      width: 16px;
+      height: 16px;
+      top: -16px;
+      left: calc(50% - 8px);
+      border-radius: 50%;
+      border: 2px solid $greenColor;
+    }
+    &:before {
+      width: 8px;
+      height: 8px;
+      top: -12px;
+      left: calc(50% - 4px);
+      border-radius: 50%;
+      background-color: $greenColor;
+    }
+  }
+}
+
+.the-f2e-2f .clock-fixed {
+  transform-origin: bottom center;
+  position: absolute;
+  z-index: 111;
+  width: 30px;
+  height: 145px;
+  left: calc(50% - 15px);
+  top: calc(50% - 145px);
+  .clock-scale {
+    position: absolute;
+  }
+  .hour-group {
+    position: relative;
+    top: -40px;
+    text-align: center;
+    color: $grayColor;
+  }
+  .hour-pm {
+    padding-bottom: 45px;
+  }
+}
+
+@for $i from 1 through 100 {
+  .the-f2e-2f .clock-fixed:nth-child(#{$i}) {
+    transform: rotate( calc(#{$i*6}deg + 24deg));
+    .clock-scale {
+      @if $i%5 == 1 {
+        width: 2px;
+        height: 30px;
+        background-color: $orangeColor;
+        top: -15px;
+        left: calc(50% - 1px);
+      }@else {
+        width: 4px;
+        height: 4px;
+        top: 0px;
+        left: calc(50% - 2px);
+        border-radius: 50%;
+        background-color: $grayColor;
+      }
+    }
+  }
+}

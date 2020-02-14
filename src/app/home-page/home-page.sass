@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya|Noto+Sans+TC')
+
+$whiteColor: #fff
+$blackColor: #333
+$primaryColor: #FFA000
+
+.home-page-bg
+  background-color: #7f796e
+  background-image: url('../../img/under-ground-01.jpg')
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  filter: blur(5px)
+  height: 100vh
+  width: 100vw
+  position: absolute
+  z-index: -1
+
+.btn-primary, a.btn-primary, button.btn-primary,
+a.btn-mobile-menu, button.btn-mobile-menu,
+a.btn-pc-menu, button.btn-pc-menu
+  font-family: 'Alegreya', 'Noto Sans TC', sans-serif
+  cursor: pointer
+  border-radius: 4px;
+  padding: 10px 18px;
+  line-height: 1.4
+  text-align: center
+  text-decoration: none
+a.btn-mobile-menu, button.btn-mobile-menu
+  font-size: 16px
+  color: $whiteColor;
+  border: 1px solid $whiteColor
+  background-color: rgba($blackColor, 0.3)
+  display: block
+  width: 100%
+  &:hover
+    background-color: rgba($whiteColor, 0.3)
+a.btn-pc-menu, button.btn-pc-menu
+  border-radius: 0px
+  color: $whiteColor;
+  background-color: rgba($blackColor, 0.3)
+  border-bottom: 1px solid $whiteColor
+  display: block
+  width: 100%
+  &:hover
+    background-color: rgba($whiteColor, 0.3)
+.btn-pc-menu-group, .btn-pc-menu
+  border: none
+  font-size: 16px
+  letter-spacing: 1px
+  position: relative
+  span
+    border-bottom: 1px solid $whiteColor
+    position: absolute
+    right: 100%
+    background-color: $whiteColor
+    top: 0px;
+    border-radius: 3px 0px 0px 3px
+    color: $blackColor
+    padding: 10px 18px
+    line-height: 1.4
+    text-align: center
+    white-space: nowrap
+.btn-pc-menu-group + .btn-pc-menu-group
+  margin-top: 20px
+.btn-primary
+  font-size: 20px
+  border: none;
+  background-color: $whiteColor
+  color: $primaryColor
+  display: inline-block
+  &:hover
+    background-color: $primaryColor
+    color: $whiteColor;
+  &.reverse
+    background-color: $primaryColor
+    color: $whiteColor;
+  &.reverse:hover
+    background-color: $whiteColor
+    color: $primaryColor
+.btn-primary + .btn-primary
+  margin-left: 20px
+.home-icon
+  width: 20px
+  height: 20px
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  background-image: url('/assets/img/home-01.svg')
+
+.home-page
+  width: 100vw
+  height: 100vh
+  position: relative
+  font-family: 'Alegreya', 'Noto Sans TC', sans-serif
+  .right-side-pc, .right-side-mobile
+    position: absolute
+    top: 0px
+    right: 0px
+    margin: 30px 20px
+  .title
+    color: $whiteColor
+    font-weight: bold
+    font-size: 40px
+  .summary
+    color: rgba($whiteColor, 0.8)
+.mobile-menu
+  position: relative
+  ul.mobile-menu-list
+    min-width: 280px
+    position: absolute
+    list-style: none
+    top: 45px
+    right: 0px
+    border-radius: 4px
+    padding: 5px 0px
+    margin: 0px
+    background-color: $whiteColor
+    &>li
+      cursor: pointer
+      display: block
+      padding: 10px 20px
+      letter-spacing: 2px
+      &:active, &:focus, &:hover
+        display: block
+        color: $whiteColor
+        background-color: rgba($blackColor, 0.9)
+
+.doc-template
+  padding-right: 60px
+  font-size: 16px
+  .sub-content>a>img
+    max-width: 300px
+    width: 100%
+  .btn-primary, .btn-primary.reverse
+    font-size: 16px;
+    padding: 10px 20px;
+  .name
+    padding: 15px 20px
+    font-size: 36px
+    color: $whiteColor
+  .content
+    height: 75vh
+    overflow: scroll
+    padding: 20px
+    border-radius: 3px
+    background-color: rgba($whiteColor, 0.6)
+  .sub-name
+    font-weight: bold
+  .sub-content
+    margin-top: 5px
+    margin-bottom: 30px
+
+

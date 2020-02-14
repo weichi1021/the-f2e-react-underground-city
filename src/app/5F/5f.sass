@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700');
+
+$bgColor: #F0F0F0
+$whiteColor: #fff
+$blackColor: #000
+
+// color level
+$levelOne: #95F084
+$levelTwo: #FFE695
+$levelThree: #FFAF6A
+$levelFour: #FF5757
+$levelFive: #9777FF
+$levelSix: #AD1774
+
+$fontSize: (1 48) (2 40) (3 36) (4 24) (5 16)
+
+@mixin flexCenter
+  display: flex
+  justify-content: center
+  align-items: center
+
+@each $n, $s in $fontSize
+  .the-f2e-5f .h#{$n}-b
+    font-size: #{$s}px !important
+    font-weight: bold !important
+  .the-f2e-5f .h#{$n}
+    font-size: #{$s}px !important
+
+.the-f2e-5f
+  background-color: $bgColor
+  min-height: 100vh
+  overflow: scroll
+  position: relative
+  font-family: 'Noto Sans TC', sans-serif;
+.aqi-header
+  .select-city
+    appearance: none
+    -moz-appearance: none
+    -webkit-appearance: none
+    border-radius: 0px
+    padding: 15px 20px
+    border: 2px solid $blackColor
+    background-color: $whiteColor
+    width: 100%
+  .select-city-group
+    position: relative
+    width: 90%
+    &:before
+      position: absolute
+      content: ""
+      top: 12px
+      right: 15px
+      width: 0
+      height: 0
+      border: 5px solid transparent
+      border-color: transparent transparent #000 transparent
+    &:after
+      position: absolute
+      content: ""
+      bottom: 12px
+      right: 15px
+      width: 0
+      height: 0
+      border: 5px solid transparent
+      border-color: #000 transparent transparent transparent
+  table.level-table,
+  table.level-table th,
+  table.level-table td
+    border-collapse: collapse
+    text-align: center
+    border: 2px solid $blackColor
+  table.level-table,
+    table-layout: fixed
+    width: 100%
+  table.level-table th
+    padding: 15px 0px
+  table.level-table td
+    height: 50px
+    padding: 5px 20px
+    background-color: $whiteColor
+.aqi-hr
+  position: relative
+  .hr-name, .hr-date
+    white-space: nowrap
+    background-color: $bgColor
+  .hr-border
+    position: relative
+    display: inline-block
+    width: 100%
+    &:after
+      content: ""
+      width: 100%
+      position: absolute
+      border-bottom-width: 2px
+      border-bottom-style: dashed
+.aqi-content
+  table.city-aqi-detail,
+  table.city-aqi-detail th,
+  table.city-aqi-detail td
+    border-collapse: collapse
+    border: 2px solid $blackColor
+  table.city-aqi-detail
+    width: 100%
+    table-layout: fixed
+    background-color: $whiteColor
+  table.city-aqi-detail th
+    padding: 10px 0px
+  table.city-aqi-detail td
+    padding: 15px 20px
+    .list-item
+      padding: 15px 0px
+    .list-item + .list-item
+      border-top: 1px solid $blackColor
+  .btn-city
+    border: 2px solid $blackColor
+    background-color: $whiteColor
+    margin-bottom: 30px
+    +flexCenter
+    div
+      padding: 10px 0px
+    &>div + div
+      border-left: 2px solid $blackColor
+.aqi-footer
+  padding: 5px 0px
+  width: 100%
+  background-color: $blackColor
+  color: $whiteColor

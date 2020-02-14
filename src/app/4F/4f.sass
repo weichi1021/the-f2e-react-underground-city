@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
+
+$bgColor: #E5E5E5
+$blackColor: #000
+$whiteColor: #fff
+
+@mixin flexCenter
+  display: flex
+  justify-content: center
+  align-items: center
+
+.the-f2e-4f
+  min-height: 100vh
+  font-family: 'Open Sans', sans-serif
+  background-color: $bgColor
+  +flexCenter
+
+.work-clock-group
+  max-width: 700px
+  min-width: 380px
+  .title
+    text-align: center
+    font-weight: 800
+    font-size: 50px
+    padding: 5px 0px
+    border-top: 5px solid $blackColor
+    border-bottom: 5px solid $blackColor
+    margin-bottom: 15px
+  .content
+    border: 2px solid $blackColor
+    box-shadow: 0px 10px 30px rgba($blackColor, 0.2)
+  .time-zone-item
+    padding: 10px 40px
+    background-color: $whiteColor
+    &.dark-ver
+      background-color: $blackColor
+      color: $whiteColor
+    .place-name
+      font-size: 24px
+      font-weight: 600
+      text-transform: uppercase
+    .date
+      font-size: 14px
+      font-weight: 600
+      font-style: italic
+    .time
+      font-size: 45px
+      font-weight: 700
+  .time-zone-item + .time-zone-item
+    border-top: 1px solid $blackColor

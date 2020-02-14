@@ -1,0 +1,70 @@
+.text-center {
+  text-align: center !important;
+}
+.text-left {
+  text-align: left !important;
+}
+.text-right {
+  text-align: right !important;
+}
+
+.position-relative {
+  position: relative;
+}
+.position-absolute {
+  position: absolute;
+}
+
+// width
+$size: (
+  0: 0px,
+  5: 5px,
+  10: 10px,
+  15: 15px,
+  20: 20px,
+  30: 30px,
+  35: 35px,
+  40: 40px,
+  50: 50px,
+  60: 60px,
+) !default;
+
+@each $n, $s in $size {
+  // margin
+  .mt#{$n} {
+    margin-top: $s !important;
+  }
+  .mr#{$n} {
+    margin-right: $s !important;
+  }
+  .mb#{$n} {
+    margin-bottom: $s !important;
+  }
+  .ml#{$n} {
+    margin-left: $s !important;
+  }
+  .mtb#{$n} {
+    margin-top: $s !important;
+    margin-bottom: $s !important;
+  }
+  // padding
+  .p#{$n} {
+    padding: $s !important;
+  }
+  .pt#{$n} {
+    padding-top: $s !important;
+  }
+  .pr#{$n} {
+    padding-right: $s !important;
+  }
+  .pb#{$n} {
+    padding-bottom: $s !important;
+  }
+  .pl#{$n} {
+    padding-left: $s !important;
+  }
+  .prl#{$n} {
+    padding-right: $s !important;
+    padding-left: $s !important;
+  }
+}

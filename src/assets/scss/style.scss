@@ -1,0 +1,21 @@
+@import 'utilities';
+@import '../../app/home-page/home-page';
+@import '../../app/1F/1f';
+@import '../../app/2F/2f';
+@import '../../app/3F/3f';
+@import '../../app/4F/4f';
+@import '../../app/5F/5f';
+@import '../../app/6F/6f';
+
+body {
+  margin: 0px;
+}
+a {
+  text-decoration: none;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+:focus {
+  outline: none;
+}
