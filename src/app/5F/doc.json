@@ -1,0 +1,10 @@
+{
+  "name": "全台空氣指標儀表板",
+  "path": "/5f",
+  "point": "必須使用 AJAX 技術串接資料 API，不可直些寫死資料在變數上；上方切換城市(高雄、台北)後，下方會切換該城市的各地區",
+  "img": "5f.png",
+  "memo": "待更新...",
+  "ui_url": "https://xd.adobe.com/spec/1e214feb-9f65-4c79-5adb-6919c1c7b8d7-6810/screen/dfcfc300-ec0f-4b70-bb23-7fc6be052a88/013-AQI/",
+  "demo_url": "/#/5f",
+  "github_url": "https://github.com/weichi1021/the-f2e-react-underground-city/tree/master/app/5F"
+}

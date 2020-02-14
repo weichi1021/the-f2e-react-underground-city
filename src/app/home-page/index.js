@@ -141,7 +141,7 @@ class Main extends React.Component {
         <button onClick={()=>{this.props.setShow(1)}} className="btn-primary">
           Get Start
         </button>
-        <a href="https://github.com/weichi1021/TheF2E-React" target="_blank" className="btn-primary reverse">
+        <a href="https://github.com/weichi1021/the-f2e-react-underground-city" target="_blank" className="btn-primary reverse">
           Github
         </a>
       </section>
