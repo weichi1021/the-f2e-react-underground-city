@@ -154,7 +154,7 @@ class AQI extends React.Component {
         },
       ],
       twCityList: twCityList,
-      aqiList: [],
+      aqiList: tempAPIDate,
       paramCity: '',
       selectedList: [],
       selectedItem: {},
@@ -200,7 +200,7 @@ class AQI extends React.Component {
     return (this.isEmpty(aqi))? '--': aqi
   }
   componentDidMount() {
-    this.queryAQI();
+    // this.queryAQI();
   }
   render() {
     return(

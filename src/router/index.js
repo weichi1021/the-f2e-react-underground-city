@@ -37,11 +37,11 @@ const routes = [
     name: 'AQI',
     component: AQI,
   },
-  {
-    path: '/6f',
-    name: 'SixtySecGame',
-    component: SixtySecGame,
-  },
+  // {
+  //   path: '/6f',
+  //   name: 'SixtySecGame',
+  //   component: SixtySecGame,
+  // },
 ]
 
 export default routes;

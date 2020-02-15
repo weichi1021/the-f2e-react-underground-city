@@ -161,7 +161,7 @@ class HomePage extends React.Component {
         { full_name: 'Calculator', display_name: 'B3', link: '/3f'},
         { full_name: 'World Clock', display_name: 'B4', link: '/4f'},
         { full_name: 'AQI', display_name: 'B5', link: '/5f'},
-        { full_name: 'Sixty Seconds Game', display_name: 'B6', link: '/6f'},
+        // { full_name: 'Sixty Seconds Game', display_name: 'B6', link: '/6f'},
       ]
     }
   }
