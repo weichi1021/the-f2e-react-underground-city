@@ -3,7 +3,6 @@
 > 參與活動：[JavaScript 題目篇 - 新手 JS 地下城](https://www.udemy.com/course/js-underground/)
 >
 > 作品網址：https://the-f2e-react-underground-city.herokuapp.com/
-> (Heroku Server會進入待機狀態，開啟時間可能需要一段時間，請耐心等候)
 
 ### 說明
 * React 新手練功
